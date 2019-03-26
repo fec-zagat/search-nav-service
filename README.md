@@ -1,13 +1,12 @@
-# Project Name
+# Search Bar & Nav Bar for Zagat Clone
 
-> Project description
+> It's a dropdown search bar for restaurants and a navbar for Zagat in major cities
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/fec-zagat/photo-carousel-service
+  - https://github.com/fec-zagat/related-restaurants-service
+  - https://github.com/fec-zagat/side-bar
 
 ## Table of Contents
 
