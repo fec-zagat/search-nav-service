@@ -11,4 +11,8 @@ describe('generatedData should match the expected data shape', () => {
       Object.prototype.hasOwnProperty.call(data, 'cuisine');
     });
   });
+
+  test('generatedData should return 100 objects', () => {
+    expect(generatedData.length).toBe(100);
+  });
 });
