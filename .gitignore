@@ -24,4 +24,4 @@ coverage
 public/bundle.js
 
 # Config files
-config/.env
+.env
