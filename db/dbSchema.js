@@ -1,7 +1,4 @@
 const mongoose = require('mongoose');
-const config = require('../config/config.js');
-
-const db = mongoose.connect(`mongodb://tlindow:${config.dbpassword}@${config.devDB}`);
 
 const restaurantSchema = mongoose.Schema({
   name: String,
@@ -15,4 +12,4 @@ const restaurantSchema = mongoose.Schema({
 });
 const Restaurant = mongoose.model('Restaurant', restaurantSchema);
 
-module.exports = { Restaurant, db };
+module.exports = { Restaurant };
