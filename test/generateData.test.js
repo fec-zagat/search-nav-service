@@ -1,15 +1,13 @@
 import generatedData from '../db/generateData';
 
 describe('generatedData should match the expected data shape', () => {
-  test('generatedData should have correct properties', () => {
-    generatedData.forEach((data) => {
-      Object.prototype.hasOwnProperty.call(data, 'name');
-      Object.prototype.hasOwnProperty.call(data, 'address');
-      Object.prototype.hasOwnProperty.call(data.address, 'district');
-      Object.prototype.hasOwnProperty.call(data.address, 'zipCode');
-      Object.prototype.hasOwnProperty.call(data.address, 'city');
-      Object.prototype.hasOwnProperty.call(data, 'cuisine');
-    });
+  test('generatedData[0] should have correct properties', () => {
+    expect(Object.prototype.hasOwnProperty.call(generatedData[0], 'name')).toBe(true);
+    expect(Object.prototype.hasOwnProperty.call(generatedData[0], 'address')).toBe(true);
+    expect(Object.prototype.hasOwnProperty.call(generatedData[0].address, 'district')).toBe(true);
+    expect(Object.prototype.hasOwnProperty.call(generatedData[0].address, 'zipCode')).toBe(true);
+    expect(Object.prototype.hasOwnProperty.call(generatedData[0].address, 'city')).toBe(true);
+    expect(Object.prototype.hasOwnProperty.call(generatedData[0], 'cuisine')).toBe(true);
   });
 
   test('generatedData should return 100 objects', () => {
