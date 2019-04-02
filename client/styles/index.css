@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Calibre-Regular;
+  src: url(../assets/fonts/Calibre-Regular.ttf);
+}
+
+@font-face {
+  font-family: Calibre-Medium;
+  src: url(../assets/fonts/Calibre-Medium.ttf);
+}
+
+@font-face {
+  font-family: Calibre-Light;
+  src: url(../assets/fonts/Calibre-Light.ttf);
+}
+
+
+body {
+  margin: 0;
+}
+
+/* ///////////////////////////////////////////
+Remove default blue outline focus on all forms
+/////////////////////////////////////////// */
+
+*:focus {
+  outline: none;
+}
