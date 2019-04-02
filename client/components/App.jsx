@@ -1,9 +1,9 @@
 import React from 'react';
-import SearchBar from './SearchBar.jsx';
+import NavBar from './NavBar.jsx';
 
 const App = () => (
   <div>
-    <SearchBar />
+    <NavBar />
   </div>
 
 );
