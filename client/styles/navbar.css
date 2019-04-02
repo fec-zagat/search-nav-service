@@ -15,10 +15,18 @@ For logo at the left of navbar
 
 .logo-nav-container {
   background: url('../assets/tagaz-logo.svg');
+}
+
+.logo-nav-container:hover {
+  background: url('../assets/tagaz-logo-alt.svg');
+  background-color: #b70138;
+}
+
+.logo-nav-container, .logo-nav-container:hover {
+  border-right: 1px solid #d0d2d3;
+  grid-column: 1;
   background-repeat: no-repeat;
   background-position: center;
-  grid-column: 1;
-  border-right: 1px solid #d0d2d3;
 }
 
 /* /////////////////////////////////////////
