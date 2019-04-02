@@ -20,6 +20,7 @@ For logo at the left of navbar
 .logo-nav-container:hover {
   background: url('../assets/tagaz-logo-alt.svg');
   background-color: #b70138;
+  cursor: pointer;
 }
 
 .logo-nav-container, .logo-nav-container:hover {
@@ -93,6 +94,11 @@ For menu options at the right of navbar
   font: 15px/20px Calibre-Medium;
   letter-spacing: 0.086em;
   text-transform: uppercase;
+}
+
+.menu-link:hover {
+  color: #b70138;
+  cursor: pointer;
 }
 
 .menu-link:first-child {
