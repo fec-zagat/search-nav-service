@@ -3,13 +3,17 @@ import '../styles/navbar.css';
 
 const NavBar = () => (
   <nav className="nav-bar">
-    <div className="logo-nav-container"></div>
-    <div className="search-bar-nav-container">
-      <div className="search-bar-container">
-        <div className="search-icon"></div>
-        <input className="search-bar" placeholder="Find a great place near you"></input>
+    <div className="mobile-logo-searchbar-container">
+      <div className="logo-nav-container"></div>
+      <div className="search-bar-nav-container">
+        <div className="search-bar-container">
+          <div className="search-icon"></div>
+          <input className="search-bar" placeholder="Find a great place near you"></input>
+        </div>
       </div>
+      <div className="menu-button"></div>
     </div>
+
     <div className="menu-nav-container">
       <div className="menu-container">
        <div className="menu-link">
