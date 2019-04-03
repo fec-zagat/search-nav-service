@@ -10,9 +10,9 @@ const port = 3000;
 
 app.use(express.static('public'));
 
-app.get('/r', (req, res) => {
+app.get('/r/:query', (req, res) => {
   mongoose.connect(`mongodb://tlindow:${process.env.dbpassword}@${process.env.devDB}`, { useNewUrlParser: true }, () => {
-    dbMethods.getAll((err, restaurants) => {
+    dbMethods.getByQuery(req.params.query, (err, restaurants) => {
       if (err) {
         throw (err);
       }
@@ -24,6 +24,9 @@ app.get('/r', (req, res) => {
 });
 
 
-app.listen(port);
+app.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.log(`Listening on port ${port}!`);
+});
 
 module.exports = app;
