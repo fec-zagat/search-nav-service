@@ -1,0 +1,8 @@
+<svg width="25px" height="25px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Chevron</title>
+    <g class="chevron-down-svg" stroke="#656666" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g class="chevron-down-svg">
+            <polyline points="11 14 15.5276928 18.5276928 20.0553856 14"></polyline>
+        </g>
+    </g>
+</svg>

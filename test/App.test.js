@@ -4,7 +4,7 @@ import App from '../client/components/App.jsx';
 
 describe('App component build test', () => {
   const wrapper = shallow(<App />);
-  test('Rendered app displays <SearchBar />', () => {
-    expect(wrapper.text()).toEqual('<SearchBar />');
+  test('Rendered app displays <NavBar />', () => {
+    expect(wrapper.text()).toEqual('<NavBar />');
   });
 });
