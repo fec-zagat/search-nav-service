@@ -3,10 +3,16 @@ Grid styling for navbar sections
 //////////////////////////////////////// */
 
 .nav-bar {
-  display: grid;
-  grid-template-columns: .9fr 2.035fr 2.965fr;
+  display: flex;
+  flex-direction: row;
   height: 79px;
   border-bottom: 1px solid #d0d2d3;
+}
+
+.mobile-logo-searchbar-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
 }
 
 /* /////////////////////////////////////////
@@ -25,9 +31,9 @@ For logo at the left of navbar
 
 .logo-nav-container, .logo-nav-container:hover {
   border-right: 1px solid #d0d2d3;
-  grid-column: 1;
   background-repeat: no-repeat;
   background-position: center;
+  width: 216px;
 }
 
 /* /////////////////////////////////////////
@@ -36,6 +42,7 @@ For search bar at the middle of navbar
 
 .search-bar-nav-container {
   border-right: 0.5px solid #d0d2d3;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,7 +52,6 @@ For search bar at the middle of navbar
   border-bottom: 1px solid #d0d2d3;
   display: flex; 
   height: 33px;
-  grid-column: 2;
   margin: 0 23px;
   padding: 7px 0;
 }
@@ -62,7 +68,6 @@ For search bar at the middle of navbar
   border: none;
   color: #b70138;
   font: 17px/20px Calibre-Regular;
-  grid-column: 2;
   letter-spacing: .013em;
   width: 100%;
 }
@@ -75,10 +80,19 @@ For search bar at the middle of navbar
 For menu options at the right of navbar
 //////////////////////////////////////// */
 
+.menu-button {
+  background: url('../assets/menu-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+  width: 59px;
+}
+
 .menu-nav-container {
   color: #656666;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   justify-content: center;
 }
 
@@ -90,9 +104,7 @@ For menu options at the right of navbar
 .menu-link {
   display: flex;
   align-items: center;
-  padding: 0 40px 0 0;
-  font: 15px/20px Calibre-Medium;
-  letter-spacing: 0.086em;
+  font-family: Calibre-Medium;
   text-transform: uppercase;
 }
 
@@ -101,12 +113,64 @@ For menu options at the right of navbar
   cursor: pointer;
 }
 
-.menu-link:first-child {
-  padding: 0 40px;
-}
-
 .down-chevron {
   background: url('../assets/downChevron.svg');
   height: 25px;
   width: 25px;
+}
+
+@media only screen and (min-width: 960px) {
+  .menu-link {
+    padding: 0 40px;
+    font-size: 15px/20px;
+    letter-spacing: .086em;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .menu-link {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+  .menu-link {
+    padding: 0 23px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-bar {
+    flex-direction: column;
+    border-bottom: none;
+  }
+
+  .mobile-logo-searchbar-container {
+    border-bottom: 1px solid #d0d2d3;
+    height: 59px;
+  }
+
+  .search-bar-container {
+    border-bottom: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .menu-container {
+    border-bottom: 1px solid #d0d2d3;
+    justify-content: center;
+    height: 39px;
+  }
+
+  .menu-link {
+    font-size: 12px;
+    letter-spacing: .125em;
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 600px) {
+  
 }
