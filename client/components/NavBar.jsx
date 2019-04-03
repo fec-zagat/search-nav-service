@@ -1,16 +1,15 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import '../styles/navbar.css';
+import SearchBar from './SearchBar.jsx';
 
-const NavBar = () => (
+const NavBar = props => (
   <nav className="nav-bar">
     <div className="mobile-logo-searchbar-container">
       <div className="logo-nav-container"></div>
-      <div className="search-bar-nav-container">
-        <div className="search-bar-container">
-          <div className="search-icon"></div>
-          <input className="search-bar" placeholder="Find a great place near you"></input>
-        </div>
-      </div>
+        <SearchBar handleSearch={props.handleSearch}
+                   restaurants={props.restaurants}
+        />
       <div className="menu-button"></div>
     </div>
 
@@ -30,5 +29,10 @@ const NavBar = () => (
     </div>
   </nav>
 );
+
+NavBar.propTypes = {
+  handleSearch: propTypes.func.isRequired,
+  restaurants: propTypes.array.isRequired,
+};
 
 export default NavBar;
