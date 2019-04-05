@@ -1,13 +1,18 @@
-# Project Name
+# Search Bar & Nav Bar for Zagat Clone
 
-> Project description
+> It's a dropdown search bar for restaurants and a navbar for Zagat in major cities
+
+![alt text](https://trello-attachments.s3.amazonaws.com/5c9a7197fac3aa03f9504f64/5c9a7220a01da67777cfc298/756c1facd8b3382a348883c79f4bf399/image.png)
+
+![alt text](https://trello-attachments.s3.amazonaws.com/5c9a7197fac3aa03f9504f64/5c9a73c20a2b9e292fbc441b/b5974d8e738c38e8b69160e009571dce/image.png)
+
+![alt text](https://trello-attachments.s3.amazonaws.com/5c9a7197fac3aa03f9504f64/5c9a78b67a5b3c7ae895c6d8/9a466a0a8cb06aae0ac20750e9a8be51/image.png)
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/fec-zagat/photo-carousel-service
+  - https://github.com/fec-zagat/related-restaurants-service
+  - https://github.com/fec-zagat/side-bar
 
 ## Table of Contents
 
