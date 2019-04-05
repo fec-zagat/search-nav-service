@@ -2,8 +2,9 @@
 // https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
+  automock: false,
   clearMocks: true,
-  collectCoverageFrom: ['src/**/*.{js,jsx,mjs}'],
+  collectCoverageFrom: ['client/**/*.{js,jsx}'],
   coverageDirectory: 'coverage',
   moduleFileExtensions: ['js', 'json', 'jsx'],
   moduleNameMapper: {
@@ -11,7 +12,7 @@ module.exports = {
     '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
   },
   setupFiles: ['./enzyme.config.js'],
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
   testMatch: ['**/__tests__/**/*.js?(x)', '**/?(*.)+(spec|test).js?(x)'],
   testPathIgnorePatterns: ['\\\\node_modules\\\\'],
   testURL: 'http://localhost',
