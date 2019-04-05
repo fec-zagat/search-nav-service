@@ -16,6 +16,14 @@ module.exports = {
     callback();
   }),
 
+  seedDB: (callback) => {
+    module.exports.deleteAll(() => {
+      module.exports.insertAll(() => {
+        callback();
+      });
+    });
+  },
+
   getAll: (callback) => {
     Restaurant.find({}, (err, docs) => {
       if (err) {
@@ -31,6 +39,6 @@ module.exports = {
         callback(err);
       }
       callback(null, docs);
-    });
+    }).limit(2);
   },
 };
