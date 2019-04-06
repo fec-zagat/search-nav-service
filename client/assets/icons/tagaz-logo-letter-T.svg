@@ -8,12 +8,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    class="zagat-logo-svg"
-   width="29"
-   height="33"
-   viewBox="0 0 29 33"
+   width="16"
+   height="16"
    version="1.1"
    id="svg34"
-   sodipodi:docname="tagaz-logo.svg"
+   sodipodi:docname="tagaz-logo-letter-T.svg"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06">
   <metadata
      id="metadata40">
@@ -42,31 +41,41 @@
      inkscape:window-height="856"
      id="namedview36"
      showgrid="false"
-     inkscape:zoom="8.937931"
-     inkscape:cx="42.275263"
-     inkscape:cy="18.745613"
-     inkscape:window-x="160"
-     inkscape:window-y="3"
+     inkscape:zoom="12.640143"
+     inkscape:cx="7.442058"
+     inkscape:cy="14.205471"
+     inkscape:window-x="11"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="g30" />
   <g
      id="g32"
-     style="fill:#ffffff;stroke:none">
+     style="fill:#ffffff;stroke:none"
+     transform="translate(0,-17)">
     <g
        class="zagat-logo-paths"
        id="g30">
+      <circle
+         style="fill:#b70138;fill-opacity:1;stroke-width:0.6995073"
+         id="path4509"
+         cx="8.0227852"
+         cy="25.005762"
+         r="7.9436717" />
       <path
-         d="M 16.472233,7.3417739 V 31.941774 h 2.1 V 9.3417739 h 7.5 v -2 h -9.6"
+         d="M 9.0118835,21.644773 V 31.653941 H 9.8663246 V 22.458526 H 12.9179 V 21.644773 H 9.0118835"
          id="path16"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         style="stroke-width:0.40687677" />
       <path
-         d="m 2.672233,9.3417739 h 7.5 V 31.941774 h 2.1 V 7.3417739 h -9.6 v 2"
+         d="m 3.3969841,22.458526 h 3.0515758 v 9.195415 H 7.303001 V 21.644773 H 3.3969841 v 0.813753"
          id="path18"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         style="stroke-width:0.40687677" />
       <path
-         d="m 2.672233,1.5417739 h 23.4 v 2 h -23.4 z"
+         d="M 3.3969841,19.284887 H 12.9179 v 0.813754 H 3.3969841 Z"
          id="path20"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         style="stroke-width:0.40687677" />
     </g>
   </g>
 </svg>
