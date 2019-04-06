@@ -16,6 +16,14 @@ module.exports = {
     callback();
   }),
 
+  seedDB: (callback) => {
+    module.exports.deleteAll(() => {
+      module.exports.insertAll(() => {
+        callback();
+      });
+    });
+  },
+
   getAll: (callback) => {
     Restaurant.find({}, (err, docs) => {
       if (err) {
@@ -23,5 +31,14 @@ module.exports = {
       }
       callback(null, docs);
     });
+  },
+
+  getByQuery: (query, callback) => {
+    Restaurant.find({ name: new RegExp(`^${query}`, 'i') }, (err, docs) => {
+      if (err) {
+        callback(err);
+      }
+      callback(null, docs);
+    }).limit(2);
   },
 };
