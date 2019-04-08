@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar.jsx';
+import parseRestaurantUrl from '../utils/parseRestaurantUrl';
 
 class App extends React.Component {
   constructor() {
@@ -7,6 +8,8 @@ class App extends React.Component {
     this.state = {
       term: '',
       restaurants: [],
+      currentRestaurant: '',
+      modalIsOpen: false,
     };
   }
 
@@ -14,6 +17,15 @@ class App extends React.Component {
   updateRestaurants(restaurants) {
     this.setState({
       restaurants,
+    });
+  }
+
+  // Changes url ending to 'restaurant.name-restaurant.city'
+  goToRestaurantPage(restaurant) {
+    this.setState({
+      currentRestaurant: restaurant,
+    }, () => {
+      window.location.replace(`http://127.0.0.1:3000/r/${parseRestaurantUrl(this.state.currentRestaurant)}`);
     });
   }
 
@@ -34,7 +46,7 @@ class App extends React.Component {
 
   // Makes a GET request with the term's first letter, then updates restaurants with results
   getSearchResults(callback) {
-    fetch(`http://127.0.0.1:3000/r/${this.state.term[0]}`)
+    fetch(`http://127.0.0.1:3000/search/r/${this.state.term[0]}`)
       .then(res => res.json())
       .then((restaurants) => {
         callback.call(this, restaurants);
@@ -43,11 +55,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
         <NavBar handleSearch={this.handleSearch.bind(this)}
                 restaurants={this.state.restaurants}
+                goToRestaurantPage={this.goToRestaurantPage.bind(this)}
         />
-      </div>
     );
   }
 }
