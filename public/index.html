@@ -5,7 +5,10 @@
   </head>
   <body>
     <div id="modal" style=" position: relative; z-index: 999;"></div>
-    <div id="app" style="position: fixed; top: 0; left: 0; width: 100%;">Show this message if app not rendering</div>
+    <div id="app" style="position: fixed; top: 0; left: 0; width: 100%;">
+    <h1> To render this component without proxy server, comment out: </h1>
+    ReactDOM.render(<App />, document.getElementById('app')); on index.jsx: line 20
+    </div>
     <script src="bundle.js"></script>
   </body>
 </html>
