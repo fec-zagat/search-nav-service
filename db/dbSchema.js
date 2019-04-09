@@ -9,6 +9,7 @@ const restaurantSchema = mongoose.Schema({
     street: String,
   },
   cuisine: String,
+  image_url: String,
 });
 const Restaurant = mongoose.model('Restaurant', restaurantSchema);
 
