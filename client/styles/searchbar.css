@@ -1,0 +1,87 @@
+.search-bar-nav-container {
+  border-right: 0.5px solid #d0d2d3;
+  flex-grow: 1;
+  background: white;
+}
+
+.search-bar-nav-container-infocus {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar-dropdown-container {
+  background: #ffffff;
+  height: 486px;
+  border: 1px solid #d0d2d3;
+  padding: 20px 30px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-bar-place-suggestion {
+  display: flex;
+  min-height: 40px;
+  padding: 4px 0;
+}
+
+.search-bar-place-suggestion-image {
+  margin-right: 8px;
+  height: 40px;
+  width: 40px;
+}
+
+.search-bar-place-suggestion-title {
+  display: flex;
+  margin-right: 8px;
+  letter-spacing: .086em;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.search-bar-place-icon-logo {
+  margin-left: 8px;
+  height: 16px;
+  vertical-align: top;
+  width: 16px;
+  background: url('../assets/icons/tagaz-logo-letter-T.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search-bar-place-suggestion-address {
+  color: #9b9b9b;
+  font-size: 12px;
+  letter-spacing: .125em;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.search-bar-container {
+  border-bottom: 1px solid #d0d2d3;
+  display: flex; 
+  height: 33px;
+  margin: 16px 23px 15px;
+  padding: 7px 0;
+}
+
+.search-icon {
+  background: url('../assets/icons/search.svg');
+  margin: 0 15px 0 0;
+  height: 24px;
+  width: 24px;
+}
+
+.search-bar {
+  background-color: white;
+  border: none;
+  color: #b70138;
+  font: 17px/20px Calibre-Regular;
+  letter-spacing: .013em;
+  width: 100%;
+}
+
+.search-bar::-webkit-input-placeholder {
+  color: #767777;
+}
