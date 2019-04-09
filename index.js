@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 const port = 3001;
 
-app.use('/r/:restaurant', express.static('public'));
+app.use('/', express.static('public'));
 
 app.get('/search/r/:query', (req, res) => {
   mongoose.connect(`mongodb://tlindow:${process.env.dbpassword}@${process.env.devDB}`, { useNewUrlParser: true }, () => {
