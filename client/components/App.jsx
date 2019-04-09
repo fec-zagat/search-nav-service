@@ -25,7 +25,7 @@ class App extends React.Component {
     this.setState({
       currentRestaurant: restaurant,
     }, () => {
-      window.location.replace(`http://127.0.0.1:3000/r/${parseRestaurantUrl(this.state.currentRestaurant)}`);
+      window.location.replace(`http://127.0.0.1:3001/r/${parseRestaurantUrl(this.state.currentRestaurant)}`);
     });
   }
 
@@ -46,7 +46,7 @@ class App extends React.Component {
 
   // Makes a GET request with the term's first letter, then updates restaurants with results
   getSearchResults(callback) {
-    fetch(`http://127.0.0.1:3000/search/r/${this.state.term[0]}`)
+    fetch(`http://127.0.0.1:3001/search/r/${this.state.term[0]}`)
       .then(res => res.json())
       .then((restaurants) => {
         callback.call(this, restaurants);
