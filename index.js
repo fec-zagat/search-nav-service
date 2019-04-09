@@ -8,7 +8,7 @@ require('dotenv').config();
 const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
-const port = 3000;
+const port = 3001;
 
 app.use('/r/:restaurant', express.static('public'));
 
@@ -25,7 +25,7 @@ app.get('/search/r/:query', (req, res) => {
   });
 });
 
-app.get('*', (req, res) => {
+app.get('/r', (req, res) => {
   res.redirect('/r/eoss-oharahaven/');
 });
 
