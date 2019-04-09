@@ -7,6 +7,11 @@ Grid styling for navbar sections
   flex-direction: row;
   height: 79px;
   border-bottom: 1px solid #d0d2d3;
+  background: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 10;
 }
 
 .mobile-logo-searchbar-container {
