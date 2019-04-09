@@ -20,11 +20,11 @@ For logo at the left of navbar
 //////////////////////////////////////// */
 
 .logo-nav-container {
-  background: url('../assets/tagaz-logo.svg');
+  background: url('../assets/icons/tagaz-logo.svg');
 }
 
 .logo-nav-container:hover {
-  background: url('../assets/tagaz-logo-alt.svg');
+  background: url('../assets/icons/tagaz-logo-alt.svg');
   background-color: #b70138;
   cursor: pointer;
 }
@@ -37,59 +37,11 @@ For logo at the left of navbar
 }
 
 /* /////////////////////////////////////////
-For search bar at the middle of navbar
-//////////////////////////////////////// */
-
-
-.search-bar-nav-container {
-  border-right: 0.5px solid #d0d2d3;
-  flex-grow: 1;
-}
-
-.search-bar-nav-container-infocus {
-  display: flex;
-  flex-direction: column;
-}
-
-.search-bar-dropdown-container {
-  height: 486px;
-  border: 1px solid #d0d2d3;
-}
-
-.search-bar-container {
-  border-bottom: 1px solid #d0d2d3;
-  display: flex; 
-  height: 33px;
-  margin: 16px 23px 15px;
-  padding: 7px 0;
-}
-
-.search-icon {
-  background: url('../assets/search.svg');
-  margin: 0 15px 0 0;
-  height: 24px;
-  width: 24px;
-}
-
-.search-bar {
-  background-color: white;
-  border: none;
-  color: #b70138;
-  font: 17px/20px Calibre-Regular;
-  letter-spacing: .013em;
-  width: 100%;
-}
-
-.search-bar::-webkit-input-placeholder {
-  color: #767777;
-}
-
-/* /////////////////////////////////////////
 For menu options at the right of navbar
 //////////////////////////////////////// */
 
 .menu-button {
-  background: url('../assets/menu-icon.svg');
+  background: url('../assets/icons/menu-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
   display: none;
@@ -122,7 +74,7 @@ For menu options at the right of navbar
 }
 
 .down-chevron {
-  background: url('../assets/downChevron.svg');
+  background: url('../assets/icons/downChevron.svg');
   height: 25px;
   width: 25px;
 }

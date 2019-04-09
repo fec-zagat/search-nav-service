@@ -3,6 +3,7 @@ const Faker = require('Faker');
 const generatedData = [];
 const numberOfDocuments = 100;
 let cuisineIncrement = 0;
+let imageIncrement = 1;
 let districtName;
 const cuisines = ['Argentina', 'Cajun', 'Estonian', 'Chinese', 'Filipino', 'Italian', 'Korean',
   'Mexican', 'Polish', 'Romanian', 'Russian', 'Thai', 'Pakistani', 'Japanese', 'Nepalese',
@@ -43,6 +44,14 @@ for (let i = 0; i < numberOfDocuments; i += 1) {
   } else {
     cuisineIncrement += 1;
   }
+
+  // Create image infomration
+  if (imageIncrement >= 10) {
+    imageIncrement -= 9;
+  } else {
+    imageIncrement += 1;
+  }
+  document.image_url = `${Faker.Image.food()}/${imageIncrement}`;
 
   generatedData.push(document);
 }
