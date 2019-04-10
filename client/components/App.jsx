@@ -1,6 +1,5 @@
 import React from 'react';
 import NavBar from './NavBar.jsx';
-import parseRestaurantUrl from '../utils/parseRestaurantUrl';
 
 class App extends React.Component {
   constructor() {
@@ -25,7 +24,7 @@ class App extends React.Component {
     this.setState({
       currentRestaurant: restaurant,
     }, () => {
-      window.location.replace(`http://127.0.0.1:3000/r/${parseRestaurantUrl(this.state.currentRestaurant)}`);
+      window.location.replace(`http://127.0.0.1:3000/r/restaurant-city-${restaurant.id}`);
     });
   }
 
