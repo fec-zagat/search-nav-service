@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import '../styles/searchbar.css';
+import '../styles/cuisines.css';
 
 const SearchBarCuisine = props => (
   <div className="search-bar-cuisine">
