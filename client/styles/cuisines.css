@@ -1,0 +1,104 @@
+.search-bar-cuisine {
+  margin: 0 20px;
+}
+  
+.search-bar-cuisine-icon-circle {
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid #101820;
+  height: 77px;
+  width: 77px;
+  margin-bottom: 54px;
+}
+
+.search-bar-cuisine-icon-circle:hover {
+  border-color: #b70138;
+  color: #b70138;
+  cursor: pointer;
+}
+
+.cuisine-text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: .061em;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.cuisine-american {
+  background: url('../assets/icons/american.svg');
+}
+
+.cuisine-brunch {
+  background: url('../assets/icons/brunch.svg');
+}
+
+.cuisine-burger {
+  background: url('../assets/icons/burger.svg');
+}
+
+.cuisine-burger {
+  background: url('../assets/icons/burger.svg');
+}
+
+.cuisine-chinese {
+  background: url('../assets/icons/chinese.svg');
+}
+
+.cuisine-french {
+  background: url('../assets/icons/french.svg');
+}
+
+.cuisine-indian {
+  background: url('../assets/icons/indian.svg');
+}
+
+.cuisine-italian {
+  background: url('../assets/icons/italian.svg');
+}
+
+.cuisine-japanese {
+  background: url('../assets/icons/japanese.svg');
+}
+
+.cuisine-mexican {
+  background: url('../assets/icons/mexican.svg');
+}
+
+.cuisine-pizza {
+  background: url('../assets/icons/pizza.svg');
+}
+
+.cuisine-seafood {
+  background: url('../assets/icons/seafood.svg');
+}
+
+.cuisine-sushi {
+  background: url('../assets/icons/sushi.svg');
+}
+
+.cuisine-thai {
+  background: url('../assets/icons/thai.svg');
+}
+
+.cuisine-vegetarian {
+  background: url('../assets/icons/vegetarian.svg');
+}
+
+.cuisine-vietnamese {
+  background: url('../assets/icons/vietnamese.svg');
+}
+
+.cuisine-svg {
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 77px;
+  width: 77px;
+}
+
+.cuisine-svg:hover {
+  /* Converts svg stroke to #b70138, credit: https://codepen.io/sosuke/pen/Pjoqqp*/
+  filter: invert(11%) sepia(85%) saturate(5795%) hue-rotate(335deg) brightness(76%) contrast(103%);
+}
