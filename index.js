@@ -26,7 +26,7 @@ app.get('/search/r/:query', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.redirect('/r/eoss-oharahaven/');
+  res.redirect('/r/restaurant-city-1/');
 });
 
 app.listen(port, () => {
