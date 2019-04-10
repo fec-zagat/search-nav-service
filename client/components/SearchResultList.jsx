@@ -4,23 +4,11 @@ import SearchResult from './SearchResult.jsx';
 import '../styles/searchbar.css';
 import SearchBarCuisine from './SearchBarCuisine.jsx';
 import cuisines from '../utils/cuisineList';
+import SearchBarPopularSearch from './SearchBarPopularSearch.jsx';
 
 const SearchResultList = props => (
   <div className="search-bar-dropdown-container">
-    <div className="search-bar-dropdown-popular">
-      <div className="search-bar-dropdown-popular-search">
-        <div className="food-search-icon"></div>
-        Breakfast
-      </div>
-      <div className="search-bar-dropdown-popular-search">
-        <div className="coffee-search-icon"></div>
-        Coffee
-      </div>
-      <div className="search-bar-dropdown-popular-search">
-        <div className="clock-search-icon"></div>
-        Quick Bites
-      </div>
-    </div>
+    <SearchBarPopularSearch />
 
     <div className="search-bar-dropdown-cuisines">
     { cuisines.map((cuisine, idx) => (
