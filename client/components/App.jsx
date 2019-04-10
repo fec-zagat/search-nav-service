@@ -25,7 +25,7 @@ class App extends React.Component {
     this.setState({
       currentRestaurant: restaurant,
     }, () => {
-      window.location.replace(`http://127.0.0.1:3001/r/${parseRestaurantUrl(this.state.currentRestaurant)}`);
+      window.location.replace(`http://127.0.0.1:3000/r/${parseRestaurantUrl(this.state.currentRestaurant)}`);
     });
   }
 
