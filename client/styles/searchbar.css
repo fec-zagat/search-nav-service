@@ -1,14 +1,18 @@
 .search-bar-nav-container {
-  border-right: 1px solid #d0d2d3;
   flex-grow: 1;
   background: white;
-  max-width: 445px; 
+  max-width: 762px;
 }
 
 .search-bar-nav-container-infocus {
+  border-left: 1px solid #d0d2d3;
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.search-result-lists {
+  display: flex;
 }
 
 .search-bar-dropdown-container {
