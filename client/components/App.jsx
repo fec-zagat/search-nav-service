@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar.jsx';
+import '../styles/index.css';
 
 class App extends React.Component {
   constructor() {
@@ -9,7 +10,23 @@ class App extends React.Component {
       restaurants: [],
       currentRestaurant: '',
       modalIsOpen: false,
+      isLoading: true,
+      animationState: 'isLoading',
     };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        animationState: 'doneLoading',
+      });
+    }, 300);
+
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+      });
+    }, 800);
   }
 
   // Updates restaurants state
@@ -54,10 +71,15 @@ class App extends React.Component {
 
   render() {
     return (
+      <div className="nav-loading-bar-flex">
         <NavBar handleSearch={this.handleSearch.bind(this)}
                 restaurants={this.state.restaurants}
                 goToRestaurantPage={this.goToRestaurantPage.bind(this)}
         />
+          { this.state.isLoading ? <div className="loader">
+            <div className={this.state.animationState}></div>
+          </div> : null }
+        </div>
     );
   }
 }
