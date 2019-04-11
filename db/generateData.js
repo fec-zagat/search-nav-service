@@ -17,8 +17,9 @@ const capitalize = word => word.charAt(0).toUpperCase() + word.slice(1);
 // Create a certain numberOfDocuments with restaurant info
 for (let i = 0; i < numberOfDocuments; i += 1) {
   const document = {};
-  let restaurantName;
+  document.id = i + 1;
 
+  let restaurantName;
   // Create two different prefixes/suffixes for restaraunt names
   if (i % 2 === 0) {
     restaurantName = `The ${capitalize(Faker.Lorem.words()[0])}`;
