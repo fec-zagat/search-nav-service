@@ -37,12 +37,18 @@ class Modal extends React.Component {
     this.modalNav.appendChild(this.modalMenu);
 
     // Focus searchInput on mount
-    const searchInput = this.modalNav.getElementsByTagName('input')[0];
-    searchInput.focus();
-    searchInput.setAttribute('style', 'background: #f1f1f2');
+    const searchInput = this.modalNav.getElementsByTagName('input');
+    searchInput[0].focus();
 
-    const searchBar = this.modalNav.getElementsByClassName('search-bar-nav-container')[0];
-    searchBar.setAttribute('style', 'background: #f1f1f2');
+    // Set a new background color for each of the search-inputs/containers
+    for (let i = 0; i < searchInput.length; i += 1) {
+      searchInput[i].setAttribute('style', 'background: #f1f1f2');
+    }
+
+    const searchContainer = this.modalNav.getElementsByClassName('search-bar-nav-container');
+    for (let i = 0; i < searchContainer.length; i += 1) {
+      searchContainer[i].setAttribute('style', 'background: #f1f1f2');
+    }
   }
 
   componentWillUnmount() {
