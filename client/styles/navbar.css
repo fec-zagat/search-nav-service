@@ -73,15 +73,25 @@ For menu options at the right of navbar
   text-transform: uppercase;
 }
 
-.menu-link:hover {
-  color: #b70138;
-  cursor: pointer;
-}
-
 .down-chevron {
   background: url('../assets/icons/downChevron.svg');
   height: 25px;
   width: 25px;
+  transition: transform .5s;
+}
+
+.up-chevron {
+  background: url('../assets/icons/downChevron.svg');
+  height: 25px;
+  width: 25px;
+  transition: transform .5s;
+  transform: rotate(-180deg);
+}
+
+.up-chevron:hover, .down-chevron:hover, .menu-link:hover {
+  /* Converts svg stroke to #b70138, credit: https://codepen.io/sosuke/pen/Pjoqqp*/
+  filter: invert(11%) sepia(85%) saturate(5795%) hue-rotate(335deg) brightness(76%) contrast(103%);
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 960px) {
