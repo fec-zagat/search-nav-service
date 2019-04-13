@@ -32,7 +32,6 @@ const SearchResultList = props => (
 
 SearchResultList.propTypes = {
   restaurants: propTypes.array.isRequired,
-  restaurantImages: propTypes.array.isRequired,
   goToRestaurantPage: propTypes.func.isRequired,
   showSuggestion: propTypes.bool.isRequired,
   showSuggestionStyle: propTypes.string.isRequired,

@@ -40,7 +40,6 @@ class SearchBar extends React.Component {
             { this.props.showSearchResults
               ? <div className="search-result-lists">
                     <SearchResultList restaurants={this.props.restaurants}
-                                      restaurantImages={this.props.restaurantImages}
                                       showSuggestion={this.props.showSuggestion}
                                       showSuggestionStyle={this.props.showSuggestionStyle}
                                       showSearchResults={this.props.showSearchResults}
@@ -74,7 +73,6 @@ class SearchBar extends React.Component {
           { this.props.showSearchResults
             ? <div className="search-result-lists">
                 <SearchResultList restaurants={this.props.restaurants}
-                                  restaurantImages={this.props.restaurantImages}
                                   showSearchResults={this.props.showSearchResults}
                                   showSuggestion={this.props.showSuggestion}
                                   showSuggestionStyle={this.props.showSuggestionStyle}
@@ -90,7 +88,6 @@ class SearchBar extends React.Component {
 SearchBar.propTypes = {
   handleSearch: propTypes.func.isRequired,
   restaurants: propTypes.array.isRequired,
-  restaurantImages: propTypes.array.isRequired,
   goToRestaurantPage: propTypes.func.isRequired,
   showSearchResults: propTypes.bool.isRequired,
   showSearchBarDropdown: propTypes.func.isRequired,

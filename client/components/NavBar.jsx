@@ -49,7 +49,6 @@ class NavBar extends React.Component {
             ? <Modal closeSearchBarDropdown={this.closeSearchBarDropdown.bind(this)}>
                 <SearchBar handleSearch={this.props.handleSearch}
                            restaurants={this.props.restaurants}
-                           restaurantImages={this.props.restaurantImages}
                            showSuggestion={this.props.showSuggestion}
                            showSuggestionStyle={this.props.showSuggestionStyle}
                            goToRestaurantPage={this.props.goToRestaurantPage}
@@ -59,7 +58,6 @@ class NavBar extends React.Component {
             </Modal>
             : <SearchBar handleSearch={this.props.handleSearch}
                          restaurants={this.props.restaurants}
-                         restaurantImages={this.props.restaurantImages}
                          showSuggestion={this.props.showSuggestion}
                          showSuggestionStyle={this.props.showSuggestionStyle}
                          goToRestaurantPage={this.props.goToRestaurantPage}
@@ -94,7 +92,6 @@ NavBar.propTypes = {
   handleSearch: propTypes.func.isRequired,
   restaurants: propTypes.array.isRequired,
   goToRestaurantPage: propTypes.func.isRequired,
-  restaurantImages: propTypes.array.isRequired,
   showSuggestion: propTypes.bool.isRequired,
   showSuggestionStyle: propTypes.string.isRequired,
 };
