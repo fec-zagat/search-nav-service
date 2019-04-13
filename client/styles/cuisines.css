@@ -11,12 +11,6 @@
   margin-bottom: 54px;
 }
 
-.search-bar-cuisine-icon-circle:hover {
-  border-color: #b70138;
-  color: #b70138;
-  cursor: pointer;
-}
-
 .cuisine-text {
   margin-top: 10px;
   text-align: center;
@@ -98,7 +92,8 @@
   width: 77px;
 }
 
-.cuisine-svg:hover {
+.cuisine-svg:hover, .search-bar-cuisine-icon-circle:hover {
   /* Converts svg stroke to #b70138, credit: https://codepen.io/sosuke/pen/Pjoqqp*/
   filter: invert(11%) sepia(85%) saturate(5795%) hue-rotate(335deg) brightness(76%) contrast(103%);
+  cursor: pointer;
 }
