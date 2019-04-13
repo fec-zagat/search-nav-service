@@ -8,26 +8,34 @@ import SearchBarPopularSearch from './SearchBarPopularSearch.jsx';
 
 const SearchResultList = props => (
   <div className="search-bar-dropdown-container">
-    <SearchBarPopularSearch />
-
-    <div className="search-bar-dropdown-cuisines">
-    { cuisines.map((cuisine, idx) => (
-      <SearchBarCuisine key={idx} cuisine={cuisine}/>
-    )) }
-    </div>
-
-    {props.restaurants.map((restaurant, idx) => (
+  { props.showSuggestion
+    ? <div>
+    { props.restaurants.map((restaurant, idx) => (
       <SearchResult key={idx}
                     restaurant={restaurant}
+                    showSuggestion={props.showSuggestion}
+                    showSuggestionStyle={props.showSuggestionStyle}
                     goToRestaurantPage={props.goToRestaurantPage}
-      />
-    ))}
+      />))}
+    </div>
+    : <div>
+        <SearchBarPopularSearch />
+        <div className="search-bar-dropdown-cuisines">
+          { cuisines.map((cuisine, idx) => (
+            <SearchBarCuisine key={idx} cuisine={cuisine}/>
+          )) }
+        </div>
+      </div>
+    }
   </div>
 );
 
 SearchResultList.propTypes = {
   restaurants: propTypes.array.isRequired,
+  restaurantImages: propTypes.array.isRequired,
   goToRestaurantPage: propTypes.func.isRequired,
+  showSuggestion: propTypes.bool.isRequired,
+  showSuggestionStyle: propTypes.string.isRequired,
 };
 
 export default SearchResultList;
