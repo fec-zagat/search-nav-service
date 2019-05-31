@@ -9,6 +9,7 @@ class NavBar extends React.Component {
     super(props);
     this.state = {
       showSearchResults: false,
+      showSideMenu: false,
     };
   }
 
@@ -26,6 +27,19 @@ class NavBar extends React.Component {
     });
   }
 
+  // Toggle sideMenu by changeing state
+  toggleSideMenu() {
+    if (this.state.showSideMenu) {
+      this.setState({
+        showSideMenu: false,
+      });
+    } else {
+      this.setState({
+        showSideMenu: true,
+      });
+    }
+  }
+
   render() {
     return (
       <nav className="nav-bar">
@@ -35,6 +49,8 @@ class NavBar extends React.Component {
             ? <Modal closeSearchBarDropdown={this.closeSearchBarDropdown.bind(this)}>
                 <SearchBar handleSearch={this.props.handleSearch}
                            restaurants={this.props.restaurants}
+                           showSuggestion={this.props.showSuggestion}
+                           showSuggestionStyle={this.props.showSuggestionStyle}
                            goToRestaurantPage={this.props.goToRestaurantPage}
                            showSearchResults={this.state.showSearchResults}
                            showSearchBarDropdown={this.showSearchBarDropdown.bind(this)}
@@ -42,6 +58,8 @@ class NavBar extends React.Component {
             </Modal>
             : <SearchBar handleSearch={this.props.handleSearch}
                          restaurants={this.props.restaurants}
+                         showSuggestion={this.props.showSuggestion}
+                         showSuggestionStyle={this.props.showSuggestionStyle}
                          goToRestaurantPage={this.props.goToRestaurantPage}
                          showSearchResults={this.state.showSearchResults}
                          showSearchBarDropdown={this.showSearchBarDropdown.bind(this)}
@@ -57,9 +75,11 @@ class NavBar extends React.Component {
             <div className="menu-link">
               <a>City&apos;s Best</a>
             </div>
-            <div className="menu-link">
+            <div className="menu-link" onClick={
+              () => this.toggleSideMenu.call(this)}>
               <a>San Francisco </a>
-              <div className="down-chevron"></div>
+              { this.state.showSideMenu ? <div className="up-chevron"></div>
+                : <div className="down-chevron"></div> }
             </div>
           </div>
         </div>
@@ -72,6 +92,8 @@ NavBar.propTypes = {
   handleSearch: propTypes.func.isRequired,
   restaurants: propTypes.array.isRequired,
   goToRestaurantPage: propTypes.func.isRequired,
+  showSuggestion: propTypes.bool.isRequired,
+  showSuggestionStyle: propTypes.string.isRequired,
 };
 
 export default NavBar;

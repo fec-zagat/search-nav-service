@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar.jsx';
+import '../styles/index.css';
 
 class App extends React.Component {
   constructor() {
@@ -9,14 +10,40 @@ class App extends React.Component {
       restaurants: [],
       currentRestaurant: '',
       modalIsOpen: false,
+      isLoading: true,
+      animationState: 'isLoading',
+      showSuggestion: false,
+      showSuggestionStyle: 'hide',
     };
   }
 
-  // Updates restaurants state
+  // When App mounts, start loading bar and remove after mock loading time
+  componentDidMount() {
+    const mockLoadTime = (Math.random() * 1300) + 700;
+    setTimeout(() => {
+      this.setState({
+        animationState: 'doneLoading',
+      });
+    }, 250);
+
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+      });
+    }, mockLoadTime);
+  }
+
+  // Updates restaurants state and preloads images in restaurantImages
   updateRestaurants(restaurants) {
     this.setState({
       restaurants,
+      showSuggestion: true,
     });
+    setTimeout(() => {
+      this.setState({
+        showSuggestionStyle: 'show',
+      });
+    }, 500);
   }
 
   // Changes url ending to 'restaurant.name-restaurant.city'
@@ -37,7 +64,8 @@ class App extends React.Component {
         this.getSearchResults(this.updateRestaurants);
       } else if (this.state.term.length === 0) {
         this.setState({
-          restaurants: [],
+          showSuggestion: false,
+          showSuggestionStyle: 'hide',
         });
       }
     });
@@ -54,10 +82,17 @@ class App extends React.Component {
 
   render() {
     return (
+      <div className="nav-loading-bar-flex">
         <NavBar handleSearch={this.handleSearch.bind(this)}
                 restaurants={this.state.restaurants}
+                showSuggestion={this.state.showSuggestion}
+                showSuggestionStyle={this.state.showSuggestionStyle}
                 goToRestaurantPage={this.goToRestaurantPage.bind(this)}
         />
+          { this.state.isLoading ? <div className="loader">
+            <div className={this.state.animationState}></div>
+          </div> : null }
+        </div>
     );
   }
 }

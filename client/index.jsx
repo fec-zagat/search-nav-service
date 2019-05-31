@@ -9,10 +9,10 @@ import 'normalize.css';
 //--------------------------------------------
 // Below used for when proxy server is running
 //--------------------------------------------
-// window.NavSearchBar = App;
+window.NavSearchBar = App;
 
 //-------------------------------------------------------
 // Comment out below for when proxy server is not running
 //-------------------------------------------------------
 
-ReactDOM.render(<App />, document.getElementById('app'));
+// ReactDOM.render(<App />, document.getElementById('app'));
