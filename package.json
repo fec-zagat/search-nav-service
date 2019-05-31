@@ -1,5 +1,11 @@
 {
   "name": "search-nav",
+  "jest": {
+    "coverageReporters": [
+      "json-summary"
+    ],
+    "collectCoverage": true
+  },
   "version": "",
   "description": "A search bar component for react app",
   "author": "Tyler Lindow",
@@ -12,7 +18,9 @@
     "serve-dev": "nodemon index.js",
     "seedDB": "node db/seedDB.js",
     "start": "webpack -p | node index.js",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage && jest-coverage-badges"
   },
   "dependencies": {
     "Faker": "^0.7.2",
@@ -23,6 +31,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "express": "^4.16.4",
+    "jest-coverage-badges": "^1.1.2",
     "jest-fetch-mock": "^2.1.2",
     "mongoose": "^5.4.20",
     "normalize.css": "^8.0.1",
