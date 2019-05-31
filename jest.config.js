@@ -5,6 +5,10 @@ module.exports = {
   automock: false,
   clearMocks: true,
   collectCoverageFrom: ['client/**/*.{js,jsx}'],
+  collectCoverage: true,
+  coverageReporters: [
+    'json-summary',
+  ],
   coverageDirectory: 'coverage',
   moduleFileExtensions: ['js', 'json', 'jsx'],
   moduleNameMapper: {

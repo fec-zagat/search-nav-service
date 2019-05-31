@@ -1,11 +1,5 @@
 {
   "name": "search-nav",
-  "jest": {
-    "coverageReporters": [
-      "json-summary"
-    ],
-    "collectCoverage": true
-  },
   "version": "",
   "description": "A search bar component for react app",
   "author": "Tyler Lindow",
@@ -18,9 +12,7 @@
     "serve-dev": "nodemon index.js",
     "seedDB": "node db/seedDB.js",
     "start": "webpack -p | node index.js",
-    "test": "jest",
-    "test:coverage": "npm test -- --coverage",
-    "test:badges": "npm run test:coverage && jest-coverage-badges"
+    "test": "jest --config jest.config.js"
   },
   "dependencies": {
     "Faker": "^0.7.2",
