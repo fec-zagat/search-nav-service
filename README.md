@@ -1,4 +1,4 @@
-[![Codecov Coverage](https://img.shields.io/codecov/c/github/tlindow/search-nav-service/&lt;master>.svg?style=flat-square)](https://codecov.io/gh/tlindow/search-nav-proxy/)
+[![Coverage](https://codecov.io/gh/fec-zagat/search-nav-service/branch/master/graph/badge.svg)](https://codecov.io/gh/fec-zagat/search-nav-service)
 
 
 # Search Bar & Nav Bar for Zagat Clone
