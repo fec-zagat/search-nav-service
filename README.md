@@ -1,3 +1,6 @@
+[![Coverage](https://codecov.io/gh/fec-zagat/search-nav-service/branch/master/graph/badge.svg)](https://codecov.io/gh/fec-zagat/search-nav-service)
+
+
 # Search Bar & Nav Bar for Zagat Clone
 
 > It's a dropdown search bar for restaurants and a navbar for Zagat in major cities
