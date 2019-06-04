@@ -1,3 +1,6 @@
+[![Codecov Coverage](https://img.shields.io/codecov/c/github/tlindow/search-nav-service/&lt;master>.svg?style=flat-square)](https://codecov.io/gh/tlindow/search-nav-proxy/)
+
+
 # Search Bar & Nav Bar for Zagat Clone
 
 > It's a dropdown search bar for restaurants and a navbar for Zagat in major cities
