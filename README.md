@@ -1,3 +1,4 @@
+### Code coverage Jest/Enzyme unit tests in progress [06/03/19]
 [![Coverage](https://codecov.io/gh/fec-zagat/search-nav-service/branch/master/graph/badge.svg)](https://codecov.io/gh/fec-zagat/search-nav-service)
 
 
