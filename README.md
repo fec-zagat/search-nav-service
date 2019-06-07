@@ -1,6 +1,6 @@
 # Search Bar & Nav Bar for Zagat Clone
 
-> It's a dropdown search bar for restaurants and a navbar for Zagat in major cities
+It's a dropdown search bar for restaurants and a navbar for Zagat in major cities
 
 ![alt text](https://trello-attachments.s3.amazonaws.com/5c9a7197fac3aa03f9504f64/5c9a7220a01da67777cfc298/756c1facd8b3382a348883c79f4bf399/image.png)
 
