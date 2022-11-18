@@ -32,7 +32,7 @@
     "react-dom": "^16.8.5",
     "sinon": "^7.3.1",
     "style-loader": "^0.23.1",
-    "svg-url-loader": "^2.3.2"
+    "svg-url-loader": "^8.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
